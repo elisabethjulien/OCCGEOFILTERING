@@ -1,3 +1,7 @@
+#from R package Flexsdm
+Velazco, S.J.E., Rose, M.B., de Andrade, A.F.A., Minoli, I. and Franklin, J., 2022. flexsdm: An r package for supporting a comprehensive and flexible species distribution modelling workflow. Methods in Ecology and Evolution, 13(8), pp.1661-1669.
+
+
 Perform geographical filtering on species occurrences
 Description
 This function perform geographical filtering of species occurrences based on different approach to define the minimum nearest-neighbor distance between points.
@@ -19,17 +23,10 @@ character. Column name with latitude data
 env_layer	
 SpatRaster. Raster variables that will be used to fit the model
 
-method	
-character. Method to perform geographical thinning. Pairs of points are filtered based on a geographical distance criteria.The following methods are available:
-  
-moran: records are filtered based on the smallest distance that reduces Moran's I to values lower than 0.1. Latlong = TRUE if occurrences are in a geographical projection. Usage method: method = c('moran').
-
-cellsize: records are filtered based on the resolution of the environmental variables which can be aggregated to coarser resolution defined by the factor. Usage method: method = c('cellsize', factor = '2').
+method	used to perform geographical thinning. Pairs of points are filtered based on a geographical distance criteria.The following methods are available:
 
 defined: records are filtered based on a distance value (d) provided in km. Usage method: method = c('defined', d = 300).
 
 prj	
 character. Projection string (PROJ4) for occurrences. Not necessary if the projection used is WGS84 ("+proj=longlat +datum=WGS84"). Default "+proj=longlat +datum=WGS84"
 
-
-.
