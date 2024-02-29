@@ -13,7 +13,7 @@ apply_filter <- function(df) {
     method = c("defined", d = "1"),
     prj = crs(somevar)
   )
-  return(filtered)
+  return(filtered)}
 
 # Define a function to apply the filter to a list
 
